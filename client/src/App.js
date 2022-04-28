@@ -1,5 +1,4 @@
 import { useCartContext } from "./context/CartContext";
-import CartProvider from "./context/CartContext";
 
 function App() {
   const { state, dispatch } = useCartContext();
@@ -7,13 +6,19 @@ function App() {
   return (
     <div>
       <h2>hello</h2>
-      <button
-        onClick={() =>
-          dispatch({ type: "ADD_TO_CART", newState: "hello from reducer" })
-        }
-      >
-        add to cart
-      </button>
+      {state === "hello from context" ? (
+        <button
+          onClick={() =>
+            dispatch({ type: "ADD_TO_CART", newState: "hello from reducer" })
+          }
+        >
+          add to cart
+        </button>
+      ) : (
+        <button onClick={() => dispatch({ type: "RESET_CART" })}>
+          reset cart
+        </button>
+      )}
     </div>
   );
 }

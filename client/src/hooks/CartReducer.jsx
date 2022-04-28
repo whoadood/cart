@@ -4,6 +4,9 @@ export const cartReducer = (state, action) => {
       return action.newState;
       break;
     }
+    case "RESET_CART": {
+      return "hello from context";
+    }
     default:
       return state;
       break;
