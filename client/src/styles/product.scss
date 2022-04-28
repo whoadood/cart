@@ -1,4 +1,7 @@
 @import "./variables";
 .product {
   border: 1px solid $border-color;
+  img {
+    max-width: 200px;
+  }
 }

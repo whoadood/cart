@@ -1,4 +1,8 @@
 .product {
   border: 1px solid blue;
 }
+
+.product img {
+  max-width: 200px;
+}
 /*# sourceMappingURL=product.css.map */

@@ -1,29 +1,19 @@
 import { useCartContext } from "./context/CartContext";
-import { useFetch } from "./hooks/useFetch";
-import Product from "./components/Product";
-import { useEffect, useState } from "react";
+import CartProvider from "./context/CartContext";
 
 function App() {
-  const { cart, dispatch } = useCartContext();
-
-  const { data, isLoading, error } = useFetch(
-    "https://fakestoreapi.com/products",
-    []
-  );
-
-  console.log(cart);
-
+  const { state, dispatch } = useCartContext();
+  console.log("cart", state);
   return (
     <div>
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : (
-        <div className="products-container">
-          {data.map((prod) => (
-            <Product key={prod.id} prod={prod} />
-          ))}
-        </div>
-      )}
+      <h2>hello</h2>
+      <button
+        onClick={() =>
+          dispatch({ type: "ADD_TO_CART", newState: "hello from reducer" })
+        }
+      >
+        add to cart
+      </button>
     </div>
   );
 }

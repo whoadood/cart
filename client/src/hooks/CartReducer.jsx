@@ -1,13 +1,11 @@
-export const CartReducer = (cart, action) => {
+export const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART": {
-      return [...cart, action.product];
+      return action.newState;
+      break;
     }
-    case "DELETE_ITEM": {
-      return cart.filter((prod) => prod.id !== action.product.id);
-    }
-    default: {
-      return cart;
-    }
+    default:
+      return state;
+      break;
   }
 };
