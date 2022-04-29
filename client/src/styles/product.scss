@@ -1,7 +1,10 @@
-@import "./variables";
-.product {
-  border: 1px solid $border-color;
-  img {
-    max-width: 200px;
-  }
+.toast {
+  border: 1px solid green;
+  background: lightgreen;
+  color: white;
+  font-weight: bold;
+}
+.error {
+  border: 1px solid red;
+  background: lightcoral;
 }

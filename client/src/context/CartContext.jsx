@@ -1,24 +1,23 @@
-import { useContext, createContext, useReducer } from "react";
-import { cartReducer } from "../hooks/CartReducer";
+import { createContext, useContext, useReducer } from "react";
+import { cartReducer } from "../hooks/cartReducer";
 
-const cartContext = createContext();
+const CartContext = createContext();
 
 export const useCartContext = () => {
-  const cart = useContext(cartContext);
+  const { cart, dispatch } = useContext(CartContext);
 
   if (cart === undefined) {
-    console.log("must use cart within context provider");
+    console.log("must use cart context within context provider");
   }
 
-  return cart;
+  return { cart, dispatch };
 };
 
 export default function CartProvider({ children }) {
-  const [state, dispatch] = useReducer(cartReducer, "hello from context");
-
+  const [cart, dispatch] = useReducer(cartReducer, []);
   return (
-    <cartContext.Provider value={{ state, dispatch }}>
+    <CartContext.Provider value={{ cart, dispatch }}>
       {children}
-    </cartContext.Provider>
+    </CartContext.Provider>
   );
 }
