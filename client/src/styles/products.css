@@ -86,6 +86,8 @@ h2 {
   top: -10%;
   display: none;
   left: 50%;
+  text-transform: uppercase;
+  font-weight: bold;
   cursor: pointer;
   color: #7732f5;
   border: 1px solid #2d145c;
@@ -167,6 +169,10 @@ h2 {
   .product-container li .product-details-container button {
     display: block;
     top: 0;
+    right: 0;
+    left: unset;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .product-container li .product-overlay {
     display: none;

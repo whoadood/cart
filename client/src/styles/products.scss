@@ -57,6 +57,8 @@ h2 {
         top: -10%;
         display: none;
         left: 50%;
+        text-transform: uppercase;
+        font-weight: bold;
         cursor: pointer;
         color: $main;
         border: 1px solid $accent;
@@ -115,6 +117,9 @@ h2 {
         button {
           display: block;
           top: 0;
+          right: 0;
+          left: unset;
+          transform: translateX(0);
         }
       }
       .product-overlay {
