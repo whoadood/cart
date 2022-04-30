@@ -1,7 +1,14 @@
-function App() {
-  console.log(cart);
+import Header from "./components/Header";
 
-  return <div></div>;
+function App() {
+  return (
+    <div>
+      <Header>
+        <h2>hello</h2>
+        <div></div>
+      </Header>
+    </div>
+  );
 }
 
 export default App;
