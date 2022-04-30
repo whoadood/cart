@@ -1,0 +1,31 @@
+h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.product-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.product-container li {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  padding: 1rem;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .product-container li {
+    min-width: 100%;
+  }
+}
+/*# sourceMappingURL=products.css.map */

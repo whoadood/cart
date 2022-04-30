@@ -2,15 +2,24 @@ import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { IoIosCloseCircle } from "react-icons/io";
 import "../styles/header.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ children }) {
-  const menuItems = ["profile", "cart", "settings", "logout"];
+  const navigate = useNavigate();
+
+  const menuItems = [
+    { name: "profile", route: "/profile" },
+    { name: "cart", route: "/cart" },
+    { name: "settings", route: "/settings" },
+    { name: "products", route: "/products" },
+    { name: "logout", route: "/logout" },
+  ];
   const [active, setActive] = useState(false);
   return (
     <>
       <header className="header-container">
         <nav>
-          <h1>Garage Sale</h1>
+          <h1 onClick={() => navigate("/")}>Garage Sale</h1>
           <div
             className="header-menu-container"
             onClick={() => setActive(!active)}
@@ -29,7 +38,9 @@ export default function Header({ children }) {
           className="header-menu-active-container"
         >
           {menuItems.map((item) => (
-            <li key={item}>{item}</li>
+            <li onClick={() => navigate(item.route)} key={item.name}>
+              {item.name}
+            </li>
           ))}
         </ul>
       </header>
