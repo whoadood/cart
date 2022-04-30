@@ -38,7 +38,13 @@ export default function Header({ children }) {
           className="header-menu-active-container"
         >
           {menuItems.map((item) => (
-            <li onClick={() => navigate(item.route)} key={item.name}>
+            <li
+              onClick={() => {
+                setActive(false);
+                navigate(item.route);
+              }}
+              key={item.name}
+            >
               {item.name}
             </li>
           ))}

@@ -1,6 +1,10 @@
 h2 {
   text-align: center;
   margin: 1rem 0;
+  color: #7732f5;
+  text-transform: capitalize;
+  text-shadow: 1px 1px rgba(245, 235, 255, 0.349);
+  font-size: 2rem;
 }
 
 .product-container {
@@ -16,16 +20,156 @@ h2 {
 }
 
 .product-container li {
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #7732f5;
+  margin: 1rem;
   padding: 1rem;
-  min-width: 200px;
-  margin-bottom: 1rem;
+  background: white;
+  border-radius: 5px;
+  max-width: 30%;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 700px) {
+.product-container li .product-overlay {
+  background: rgba(245, 235, 255, 0.349);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.product-container li img {
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 5px;
+}
+
+.product-container li .product-details-container {
+  background: #7732f5;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  padding: 3rem 2rem 2rem 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-container li .product-details-container button {
+  position: absolute;
+  top: -10%;
+  display: none;
+  left: 50%;
+  cursor: pointer;
+  color: #7732f5;
+  border: 1px solid #2d145c;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1rem;
+}
+
+.product-container li .product-details-container button:active {
+  background: rgba(245, 235, 255, 0.9);
+}
+
+.product-container li .product-details-container h3 {
+  color: #2d145c;
+}
+
+.product-container li .product-details-container p {
+  margin: 1rem 0;
+}
+
+.product-container li .product-details-container .product-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-container li .product-details-container .product-footer h4 {
+  font-size: 2rem;
+}
+
+.product-container li .product-details-container .product-footer .customer-feedback-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: bold;
+  color: #2d145c;
+}
+
+.product-container li:hover .product-overlay {
+  opacity: 1;
+}
+
+.product-container li:hover .product-details-container {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.product-container li:hover .product-details-container button {
+  display: block;
+}
+
+@media screen and (max-width: 1070px) {
   .product-container li {
     min-width: 100%;
+    margin: 1rem 0;
+  }
+  .product-container li .product-details-container {
+    position: unset;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #7732f5;
+    background: white;
+  }
+  .product-container li .product-details-container button {
+    display: block;
+    top: 0;
+  }
+  .product-container li .product-overlay {
+    display: none;
   }
 }
 /*# sourceMappingURL=products.css.map */

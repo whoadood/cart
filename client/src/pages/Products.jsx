@@ -16,7 +16,7 @@ export default function Products() {
   console.log(data);
   return (
     <>
-      <h2> product heading</h2>
+      <h2> products heading</h2>
       <ul className="product-container">
         {data?.map((product) => (
           <li key={product.id}>

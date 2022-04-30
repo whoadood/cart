@@ -1,6 +1,12 @@
+@import "./variables.scss";
+
 h2 {
   text-align: center;
   margin: 1rem 0;
+  color: $main;
+  text-transform: capitalize;
+  text-shadow: 1px 1px hsla(270, 100%, 96%, 0.349);
+  font-size: 2rem;
 }
 .product-container {
   display: flex;
@@ -8,17 +14,112 @@ h2 {
   justify-content: space-between;
   list-style: none;
   li {
-    flex-basis: 33%;
-    //     background: hsl();
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid $main;
+    margin: 1rem;
     padding: 1rem;
-    min-width: 200px;
-    margin-bottom: 1rem;
+    background: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    max-width: 30%;
+    overflow: hidden;
+    .product-overlay {
+      background: hsla(270, 100%, 96%, 0.349);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    img {
+      width: 80%;
+      margin: 1rem auto;
+      border-radius: 5px;
+    }
+    .product-details-container {
+      background: $main;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(100%);
+      transition: transform 1s ease-in-out;
+      padding: 3rem 2rem 2rem 2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      button {
+        position: absolute;
+        top: -10%;
+        display: none;
+        left: 50%;
+        cursor: pointer;
+        color: $main;
+        border: 1px solid $accent;
+        transform: translateX(-50%);
+        padding: 1rem;
+      }
+      button:active {
+        background: hsla(270, 100%, 96%, 0.9);
+      }
+      h3 {
+        color: $accent;
+      }
+      p {
+        margin: 1rem 0;
+      }
+      .product-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+          font-size: 2rem;
+        }
+        .customer-feedback-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          font-weight: bold;
+          color: $accent;
+        }
+      }
+    }
+  }
+  li:hover {
+    .product-overlay {
+      opacity: 1;
+    }
+    .product-details-container {
+      transform: translateY(0);
+      button {
+        display: block;
+      }
+    }
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1070px) {
   .product-container {
     li {
       min-width: 100%;
+      margin: 1rem 0;
+      .product-details-container {
+        position: unset;
+        transform: translateY(0);
+        color: $main;
+        background: hsl(0, 0%, 100%);
+        button {
+          display: block;
+          top: 0;
+        }
+      }
+      .product-overlay {
+        display: none;
+      }
     }
   }
 }
