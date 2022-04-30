@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header-container {
+  position: fixed;
+  background: hsl(261, 91%, 58%);
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 0 1rem;
+  color: hsl(24, 41%, 84%);
+  nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 1rem 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.header-menu-container {
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.header-menu-container:hover {
+  background: hsla(0, 0%, 26%, 0.5);
+}
+.header-menu-container:active {
+  transform: scale(0.95);
+}
+.header-menu-active-container {
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0 1rem;
+  li {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+  li:hover {
+    background: hsla(0, 0%, 26%, 0.5);
+  }
+  li:active {
+    transform: scale(0.95);
+  }
+}
+body {
+  padding: 2rem 0 0 0;
+  background: hsl(261, 64%, 22%);
+}
+main {
+  background-image: url("/public/assets/pexels-min-an-1087727.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: hsla(0, 0%, 26%, 0.65);
+  padding: 7rem 2rem 2rem 2rem;
+  min-height: calc(100vh - 2rem);
+  color: hsl(24, 41%, 84%);
+}
