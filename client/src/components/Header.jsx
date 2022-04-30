@@ -33,7 +33,9 @@ export default function Header({ children }) {
           ))}
         </ul>
       </header>
-      <main>{children}</main>
+      <main>
+        <div className="page-container">{children}</div>
+      </main>
     </>
   );
 }
