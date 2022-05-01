@@ -1,15 +1,21 @@
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
+import { FaShoppingCart } from "react-icons/fa";
 import { IoIosCloseCircle } from "react-icons/io";
 import "../styles/header.css";
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "../context/CartContext";
 
 export default function Header({ children }) {
   const navigate = useNavigate();
 
+  const { cart } = useCartContext();
+
+  const cartQTY = cart?.reduce((acc, cur) => (acc += cur.qty), 0);
+
   const menuItems = [
     { name: "profile", route: "/profile" },
-    { name: "cart", route: "/cart" },
+    { name: "cart", icon: <FaShoppingCart />, route: "/cart" },
     { name: "settings", route: "/settings" },
     { name: "products", route: "/products" },
     { name: "logout", route: "/logout" },
@@ -45,7 +51,10 @@ export default function Header({ children }) {
               }}
               key={item.name}
             >
-              {item.name}
+              {item.icon ? item.icon : item.name}
+              {item.name === "cart" && cartQTY > 0 && (
+                <div className="cart-qty">{cartQTY}</div>
+              )}
             </li>
           ))}
         </ul>
