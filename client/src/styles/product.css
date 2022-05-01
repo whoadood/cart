@@ -184,11 +184,16 @@
   }
   .product-container li .product-details-container button {
     display: block;
-    top: 0;
+    top: 6rem;
+    padding: 0.5rem;
     right: 0;
     left: unset;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .product-container li .product-details-container .product-description {
+    padding-right: 7rem;
+    font-size: 0.8rem;
   }
   .product-container li .product-overlay {
     display: none;

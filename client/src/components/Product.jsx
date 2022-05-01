@@ -22,7 +22,9 @@ export default function Product({ prod }) {
         </button>
         <div className="link-to-product" onClick={() => console.log("hello")}>
           <h3>{prod.title.slice(0, 20)}...</h3>
-          <p>{prod.description.slice(0, 80)}...</p>
+          <p className="product-description">
+            {prod.description.slice(0, 80)}...
+          </p>
           <div className="product-footer">
             <h4>${prod.price.toFixed(2)}</h4>
             <div className="customer-feedback-container">

@@ -70,12 +70,12 @@
     .cart-qty {
       background: $accent;
       border-radius: 50%;
-      padding: 0.25rem;
+      padding: 0.25rem 0.5rem;
       font-size: 0.8rem;
       font-weight: bold;
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: -5px;
     }
   }
   li:hover {

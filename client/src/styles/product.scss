@@ -126,10 +126,15 @@
         background: hsl(0, 0%, 100%);
         button {
           display: block;
-          top: 0;
+          top: 6rem;
+          padding: 0.5rem;
           right: 0;
           left: unset;
           transform: translateX(0);
+        }
+        .product-description {
+          padding-right: 7rem;
+          font-size: 0.8rem;
         }
       }
       .product-overlay {
