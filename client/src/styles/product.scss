@@ -68,18 +68,18 @@
       .link-to-product:hover {
         h3 {
           color: $main-font;
-          transition: all 0.5s ease-in-out;
         }
         p {
           color: $accent;
-          transition: all 0.5s ease-in-out;
         }
       }
       h3 {
         color: $accent;
+        transition: all 0.5s ease-in-out;
       }
       p {
         margin: 1rem 0;
+        transition: all 0.5s ease-in-out;
       }
       .product-footer {
         display: flex;

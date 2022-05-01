@@ -102,22 +102,22 @@
 
 .product-container li .product-details-container .link-to-product:hover h3 {
   color: #e7d3c5;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .product-container li .product-details-container .link-to-product:hover p {
   color: #2d145c;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .product-container li .product-details-container h3 {
   color: #2d145c;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .product-container li .product-details-container p {
   margin: 1rem 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .product-container li .product-details-container .product-footer {
