@@ -32,9 +32,12 @@ export default function CartItem({ prod }) {
           </option>
         ))}
       </select>
-      <button onClick={handleDelete} className="delete-item">
-        X
-      </button>
+      <div className="price-total-container">
+        ${(Number(prod.qty) * prod.price).toFixed(2)}
+      </div>
+      <div className="delete-button-container">
+        <button onClick={handleDelete}>X</button>
+      </div>
     </li>
   );
 }

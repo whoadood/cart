@@ -1,0 +1,92 @@
+@import "./variables.scss";
+
+.cart-list-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+.cartItem {
+  background: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px hsla(0, 0, 0, 0.5);
+  border: 1px solid $main;
+  display: grid;
+  grid-template-columns: 15% auto 15% 15% 10%;
+  align-items: center;
+  grid-gap: 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: $main;
+  img {
+    max-width: 40px;
+  }
+  h3 {
+    cursor: pointer;
+  }
+  select {
+    border-width: 2px;
+    border-color: $main;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: $main;
+    min-width: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    option {
+      font-weight: bold;
+    }
+  }
+  .price-total-container {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .delete-button-container {
+    display: flex;
+    justify-content: center;
+    button {
+      border-radius: 50%;
+      padding: 0.5rem;
+      color: $main-font;
+      font-weight: bold;
+      background: $main;
+      box-shadow: 0 0 10px 0 hsla(0, 0, 0, 0.5);
+      border: 2px solid $accent;
+      cursor: pointer;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+  }
+}
+.checkout-container {
+  background: $main;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px hsla(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: $main-font;
+  button {
+    cursor: pointer;
+    background: $main-font;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 hsla(0, 0, 0, 0.5);
+    border: 2px solid $accent;
+    padding: 0.5rem;
+    color: $main;
+    font-weight: bold;
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+}
