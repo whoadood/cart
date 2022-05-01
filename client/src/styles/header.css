@@ -160,6 +160,7 @@ main {
 @media screen and (max-width: 1050px) {
   .page-container {
     padding: 0.5rem;
+    all: unset;
   }
 }
 /*# sourceMappingURL=header.css.map */

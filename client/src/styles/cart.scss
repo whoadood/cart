@@ -12,11 +12,11 @@
   box-shadow: 0 0 15px 5px hsla(0, 0, 0, 0.5);
   border: 1px solid $main;
   display: grid;
-  grid-template-columns: 15% auto 15% 15% 10%;
+  grid-template-columns: 15% auto 15% 15% 20%;
   align-items: center;
   grid-gap: 1rem;
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: $main;
   img {
     max-width: 40px;
@@ -28,7 +28,7 @@
     border-width: 2px;
     border-color: $main;
     border-radius: 5px;
-    padding: 0.5rem;
+    padding: 0.3rem;
     color: $main;
     min-width: 30px;
     font-weight: bold;
@@ -42,25 +42,21 @@
     text-align: center;
     font-size: 1rem;
   }
-  .delete-button-container {
-    display: flex;
-    justify-content: center;
-    button {
-      border-radius: 50%;
-      padding: 0.5rem;
-      color: $main-font;
-      font-weight: bold;
-      background: $main;
-      box-shadow: 0 0 10px 0 hsla(0, 0, 0, 0.5);
-      border: 2px solid $accent;
-      cursor: pointer;
-    }
-    button:hover {
-      transform: scale(1.05);
-    }
-    button:active {
-      transform: scale(0.95);
-    }
+  button {
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: $main-font;
+    font-weight: bold;
+    background: $main;
+    box-shadow: 0 0 10px 0 hsla(0, 0, 0, 0.5);
+    border: 2px solid $accent;
+    cursor: pointer;
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+  button:active {
+    transform: scale(0.95);
   }
 }
 .checkout-container {
