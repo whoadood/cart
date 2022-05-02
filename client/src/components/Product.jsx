@@ -2,7 +2,6 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BsStarHalf } from "react-icons/bs";
-
 import "../styles/product.css";
 
 export default function Product({ prod }) {
