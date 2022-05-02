@@ -8,8 +8,6 @@ export default function Products() {
   const { data, isLoading, error } = useProductContext();
   const { cart, dispatch } = useCartContext();
 
-  console.log("cart", cart);
-
   if (isLoading) {
     return (
       <div className="loading-container">

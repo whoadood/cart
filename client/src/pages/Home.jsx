@@ -1,13 +1,27 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useProductContext } from "../context/ProductContext";
 import Product from "../components/Product";
 import "../styles/home.css";
+import { useNavigate } from "react-router-dom";
+import Loader from "../components/Loader";
 
 export default function Home() {
-  const { data } = useProductContext();
-  const bestSellers = data
-    .sort((a, b) => b.rating.count - a.rating.count)
-    .slice(0, 6);
+  const { data, isLoading, error } = useProductContext();
+
+  const [bestSellers, setBestSellers] = useState([]);
+  useEffect(() => {
+    if (data[0]) {
+      setBestSellers(
+        data.sort((a, b) => b.rating.count - a.rating.count).slice(0, 6)
+      );
+    }
+  }, [isLoading]);
+
+  const navigate = useNavigate();
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>
@@ -20,7 +34,7 @@ export default function Home() {
             Garage Sale aims to simplify reselling of authentic high end
             designer items through an intuitive responsive user interface
           </p>
-          <button>Start Shopping</button>
+          <button onClick={() => navigate("/products")}>Start Shopping</button>
         </div>
       </div>
       <h2>Best Sellers</h2>

@@ -29,6 +29,7 @@
   border-radius: 5px;
   max-width: 30%;
   overflow: hidden;
+  min-height: 400px;
 }
 
 .product-container li .product-overlay {

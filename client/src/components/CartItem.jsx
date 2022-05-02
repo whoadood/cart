@@ -19,8 +19,6 @@ export default function CartItem({ prod }) {
     dispatch({ type: "DELETE_FROM_CART", product: prod });
   };
 
-  console.log(select);
-
   return (
     <li className="cartItem">
       <img src={prod.image} alt="product image" />
@@ -35,9 +33,7 @@ export default function CartItem({ prod }) {
       <div className="price-total-container">
         ${(Number(prod.qty) * prod.price).toFixed(2)}
       </div>
-      {/* <div className="delete-button-container"> */}
       <button onClick={handleDelete}>remove</button>
-      {/* </div> */}
     </li>
   );
 }
