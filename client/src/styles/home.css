@@ -59,6 +59,10 @@
   cursor: pointer;
 }
 
+.hero-container .CTA-container button:hover {
+  background: rgba(231, 211, 197, 0.5);
+}
+
 .hero-container .CTA-container button:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);

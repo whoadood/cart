@@ -39,6 +39,9 @@
       font-weight: bold;
       cursor: pointer;
     }
+    button:hover {
+      background: hsla(24, 41%, 84%, 0.5);
+    }
     button:active {
       transform: scale(0.95);
     }

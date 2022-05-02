@@ -82,6 +82,8 @@
   top: -10%;
   display: none;
   left: 50%;
+  -webkit-box-shadow: 0 0 10px 0 #444241;
+          box-shadow: 0 0 10px 0 #444241;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -92,8 +94,8 @@
   padding: 1rem;
 }
 
-.product-container li .product-details-container button:active {
-  background: rgba(245, 235, 255, 0.9);
+.product-container li .product-details-container button:hover {
+  background: rgba(231, 211, 197, 0.65);
 }
 
 .product-container li .product-details-container .link-to-product {

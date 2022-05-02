@@ -51,6 +51,7 @@
         top: -10%;
         display: none;
         left: 50%;
+        box-shadow: 0 0 10px 0 hsl(20, 2%, 26%);
         text-transform: uppercase;
         font-weight: bold;
         cursor: pointer;
@@ -59,8 +60,8 @@
         transform: translateX(-50%);
         padding: 1rem;
       }
-      button:active {
-        background: hsla(270, 100%, 96%, 0.9);
+      button:hover {
+        background: hsla(24, 41%, 84%, 0.65);
       }
       .link-to-product {
         cursor: pointer;
