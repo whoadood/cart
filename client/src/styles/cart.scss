@@ -12,7 +12,7 @@
   box-shadow: 0 0 15px 5px hsla(0, 0, 0, 0.5);
   border: 1px solid $main;
   display: grid;
-  grid-template-columns: 15% auto 15% 15% 20%;
+  grid-template-columns: 15% auto 20% 25%;
   align-items: center;
   grid-gap: 1rem;
   padding: 1rem;
@@ -28,6 +28,7 @@
     border-width: 2px;
     border-color: $main;
     border-radius: 5px;
+    margin-bottom: 0.5rem;
     padding: 0.3rem;
     color: $main;
     min-width: 30px;

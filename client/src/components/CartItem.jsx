@@ -23,15 +23,15 @@ export default function CartItem({ prod }) {
     <li className="cartItem">
       <img src={prod.image} alt="product image" />
       <h3>{prod.title}</h3>
-      <select type="input" name="qty" value={select} onChange={handleChange}>
-        {selectQTY.map((q) => (
-          <option value={q} key={`${prod.name} ${prod.id} ${q}`}>
-            {q}
-          </option>
-        ))}
-      </select>
       <div className="price-total-container">
-        ${(Number(prod.qty) * prod.price).toFixed(2)}
+        <select type="input" name="qty" value={select} onChange={handleChange}>
+          {selectQTY.map((q) => (
+            <option value={q} key={`${prod.name} ${prod.id} ${q}`}>
+              {q}
+            </option>
+          ))}
+        </select>
+        <h4>${(Number(prod.qty) * prod.price).toFixed(2)}</h4>
       </div>
       <button onClick={handleDelete}>remove</button>
     </li>
