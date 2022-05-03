@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://whoadood.github.io/cart",
+  "homepage": "https://github.com/whoadood/cart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
