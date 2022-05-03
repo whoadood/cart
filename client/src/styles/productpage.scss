@@ -1,0 +1,44 @@
+@import "./variables.scss";
+.product-container {
+  background: hsl(0, 0, 100%);
+  color: $main;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 5px 5px hsla(0, 0%, 26%, 0.65);
+  img {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+  .product-details-container {
+    padding: 0 1rem;
+    button {
+      box-shadow: 0 0 10px 0 hsl(20, 2%, 26%);
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 1rem 0;
+      cursor: pointer;
+      color: $main;
+      border: 1px solid $accent;
+      padding: 1rem;
+    }
+    button:hover {
+      background: hsla(24, 41%, 84%, 0.65);
+    }
+    p {
+      margin: 1rem 0;
+      color: $accent;
+    }
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      h4 {
+        font-size: 2rem;
+      }
+      .customer-feedback-container {
+        color: rgb(255, 187, 0);
+      }
+    }
+  }
+}
