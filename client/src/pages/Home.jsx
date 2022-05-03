@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <h2>Garage Sale</h2>
       <div className="hero-container">
-        <img src="/assets/pexels-kei-scampa-2964779.jpg" alt="storefrontj" />
+        <img src="/assets/pexels-kei-scampa-2964779.jpg" alt="storefront" />
         <div className="CTA-container">
           <h3>One persons trash is anothers treasure</h3>
           <p>
