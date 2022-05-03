@@ -18,14 +18,11 @@ export default function Header({ children, user = null }) {
   const cartQTY = cart?.reduce((acc, cur) => (acc += cur.qty), 0);
 
   const menuItems = [
-    { name: "profile", icon: <CgProfile />, route: "/profile" },
     { name: "cart", icon: <FaShoppingCart />, route: "/cart" },
-    { name: "settings", icon: <FiSettings />, route: "/settings" },
     { name: "products", icon: <RiShoppingBasket2Line />, route: "/products" },
     {
       name: "logout",
       icon: user ? <HiOutlineLogout /> : <HiOutlineLogin />,
-      // icon: <HiOutlineLogout />,
       route: user ? "/logout" : "/login",
     },
   ];

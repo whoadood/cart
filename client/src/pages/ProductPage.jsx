@@ -19,9 +19,9 @@ export default function ProductPage() {
       {isLoading ? (
         <Loader />
       ) : data.length > 0 ? (
-        <div className="product-container">
+        <div className="product-page-container">
           <img src={prod.image} alt="product image" />
-          <div className="product-details-container">
+          <div className="product-page-details-container">
             <button
               onClick={() => {
                 dispatch({ type: "ADD_TO_CART", product: prod });
@@ -30,10 +30,10 @@ export default function ProductPage() {
               add to cart
             </button>
             <h3>{prod.title}</h3>
-            <p className="product-description">{prod.description}</p>
-            <div className="product-footer">
+            <p className="product-page-description">{prod.description}</p>
+            <div className="product-page-footer">
               <h4>${prod.price.toFixed(2)}</h4>
-              <div className="customer-feedback-container">
+              <div className="pp-customer-feedback-container">
                 <p>{prod.rating.count} reviews</p>
                 <Rating prod={prod} />
               </div>
