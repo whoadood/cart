@@ -160,6 +160,9 @@
   .product-container {
     li {
       flex-direction: column;
+      img {
+        width: 40%;
+      }
     }
   }
 }

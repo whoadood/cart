@@ -234,5 +234,8 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .product-container li img {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=product.css.map */

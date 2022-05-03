@@ -19,10 +19,6 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
   return (
     <>
       <h2>Garage Sale</h2>
@@ -38,13 +34,18 @@ export default function Home() {
         </div>
       </div>
       <h2>Best Sellers</h2>
-      <ul className="product-container">
-        {bestSellers?.map((prod) => (
-          <li key={prod.id}>
-            <Product prod={prod} />
-          </li>
-        ))}
-      </ul>
+
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ul className="product-container">
+          {bestSellers?.map((prod) => (
+            <li key={prod.id}>
+              <Product prod={prod} />
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
