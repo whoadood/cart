@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/whoadood/cart/static/css/main.90a98fd8.css",
+    "main.js": "/whoadood/cart/static/js/main.4f66f545.js",
+    "static/media/pexels-min-an-1087727.jpg": "/whoadood/cart/static/media/pexels-min-an-1087727.d3adce31a5f1a16a502d.jpg",
+    "index.html": "/whoadood/cart/index.html",
+    "main.90a98fd8.css.map": "/whoadood/cart/static/css/main.90a98fd8.css.map",
+    "main.4f66f545.js.map": "/whoadood/cart/static/js/main.4f66f545.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90a98fd8.css",
+    "static/js/main.4f66f545.js"
+  ]
+}
