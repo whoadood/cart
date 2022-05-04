@@ -42,13 +42,18 @@
         color: $main;
         background: $main-font;
         border: 1px solid $accent;
+        box-shadow: $shadow;
         padding: 1rem;
         margin: 1rem auto;
-        transition: all 0.5s ease-in-out;
+        transition: background-color 0.25s ease-in-out;
       }
       button:hover {
         background: $accent;
+        transform: scale(1.05);
         color: $main-font;
+      }
+      button:active {
+        transform: scale(1);
       }
       .link-to-product {
         cursor: pointer;

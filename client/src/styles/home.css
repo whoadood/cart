@@ -46,26 +46,30 @@
 }
 
 .hero-container .CTA-container button {
-  display: block;
-  margin: 0 auto;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-  background: #e7d3c5;
-  border: 2px solid #2d145c;
-  border-radius: 5px;
-  padding: 0.5rem;
-  color: #2d145c;
+  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  color: #7732f5;
+  background: #e7d3c5;
+  border: 1px solid #2d145c;
+  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+  padding: 1rem;
+  margin: 1rem auto;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .hero-container .CTA-container button:hover {
-  background: rgba(231, 211, 197, 0.5);
+  background: #2d145c;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #e7d3c5;
 }
 
 .hero-container .CTA-container button:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media screen and (max-width: 900px) {

@@ -71,15 +71,24 @@
   color: #7732f5;
   background: #e7d3c5;
   border: 1px solid #2d145c;
+  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
   padding: 1rem;
   margin: 1rem auto;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .product-container .prod .product-details-container button:hover {
   background: #2d145c;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   color: #e7d3c5;
+}
+
+.product-container .prod .product-details-container button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .product-container .prod .product-details-container .link-to-product {
