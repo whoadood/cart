@@ -7,13 +7,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #2d145c;
 }
 
 .cartItem {
   background: white;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border: 1px solid #7732f5;
   display: -ms-grid;
   display: grid;
@@ -34,6 +35,10 @@
 
 .cartItem h3 {
   cursor: pointer;
+}
+
+.cartItem h3:hover {
+  color: #2d145c;
 }
 
 .cartItem select {

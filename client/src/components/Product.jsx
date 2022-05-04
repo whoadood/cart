@@ -9,9 +9,11 @@ export default function Product({ prod }) {
   const navigate = useNavigate();
 
   return (
-    <>
+    <li className="prod">
       <div className="product-overlay" />
-      <img src={prod.image} alt="product image" />
+      <div className="image-container">
+        <img src={prod.image} alt="product image" />
+      </div>
       <div className="product-details-container">
         <button
           onClick={() => {
@@ -37,6 +39,6 @@ export default function Product({ prod }) {
           </div>
         </div>
       </div>
-    </>
+    </li>
   );
 }

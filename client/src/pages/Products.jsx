@@ -21,9 +21,7 @@ export default function Products() {
       <h2> products heading</h2>
       <ul className="product-container">
         {data?.map((product) => (
-          <li key={product.id}>
-            <Product prod={product} />
-          </li>
+          <Product key={product.id} prod={product} />
         ))}
       </ul>
     </>
