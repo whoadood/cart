@@ -24,8 +24,8 @@
           justify-content: space-between;
   margin: 1rem;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
   border-radius: 5px;
   border: 1px solid #7732f5;
 }
@@ -71,8 +71,8 @@
   color: #7732f5;
   background: #e7d3c5;
   border: 1px solid #2d145c;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
   padding: 1rem;
   margin: 1rem auto;
   -webkit-transition: background-color 0.25s ease-in-out;

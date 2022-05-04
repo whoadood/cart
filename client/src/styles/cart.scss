@@ -56,9 +56,11 @@
     box-shadow: $shadow;
     border: 2px solid $accent;
     cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
   }
   button:hover {
     transform: scale(1.05);
+    background-color: $accent;
   }
   button:active {
     transform: scale(0.95);
@@ -75,19 +77,22 @@
   font-size: 1rem;
   color: $main-font;
   button {
-    cursor: pointer;
-    background: $main-font;
-    border-radius: 5px;
-    box-shadow: $shadow;
-    border: 2px solid $accent;
-    padding: 0.5rem;
-    color: $main;
+    text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
+    color: $main;
+    background: $main-font;
+    border: 1px solid $accent;
+    box-shadow: $shadow;
+    padding: 1rem;
+    transition: background-color 0.25s ease-in-out;
   }
   button:hover {
+    background: $accent;
     transform: scale(1.05);
+    color: $main-font;
   }
   button:active {
-    transform: scale(0.95);
+    transform: scale(1);
   }
 }

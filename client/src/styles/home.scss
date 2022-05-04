@@ -6,6 +6,7 @@
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+  box-shadow: $shadow;
   img {
     max-width: calc(50% - 1rem);
     border-radius: 5px;

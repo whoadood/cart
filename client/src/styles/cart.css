@@ -13,8 +13,8 @@
 .cartItem {
   background: white;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
   border: 1px solid #7732f5;
   display: -ms-grid;
   display: grid;
@@ -69,15 +69,18 @@
   color: #e7d3c5;
   font-weight: bold;
   background: #7732f5;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
   border: 2px solid #2d145c;
   cursor: pointer;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .cartItem button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  background-color: #2d145c;
 }
 
 .cartItem button:active {
@@ -88,8 +91,8 @@
 .checkout-container {
   background: #7732f5;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,24 +108,28 @@
 }
 
 .checkout-container button {
-  cursor: pointer;
-  background: #e7d3c5;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
-  border: 2px solid #2d145c;
-  padding: 0.5rem;
-  color: #7732f5;
+  text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
+  color: #7732f5;
+  background: #e7d3c5;
+  border: 1px solid #2d145c;
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+  padding: 1rem;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .checkout-container button:hover {
+  background: #2d145c;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  color: #e7d3c5;
 }
 
 .checkout-container button:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=cart.css.map */
