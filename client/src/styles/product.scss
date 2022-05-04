@@ -12,6 +12,7 @@
     justify-content: space-between;
     margin: 1rem;
     overflow: hidden;
+    box-shadow: $shadow;
     border-radius: 5px;
     border: 1px solid $main;
     .image-container {
@@ -39,12 +40,15 @@
         font-weight: bold;
         cursor: pointer;
         color: $main;
+        background: $main-font;
         border: 1px solid $accent;
         padding: 1rem;
         margin: 1rem auto;
+        transition: all 0.5s ease-in-out;
       }
       button:hover {
-        background: hsla(24, 41%, 84%, 0.65);
+        background: $accent;
+        color: $main-font;
       }
       .link-to-product {
         cursor: pointer;

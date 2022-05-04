@@ -5,8 +5,8 @@
   padding: 1rem;
   margin: 0 auto;
   max-width: 900px;
-  -webkit-box-shadow: 0 0 5px 5px rgba(66, 66, 66, 0.65);
-          box-shadow: 0 0 5px 5px rgba(66, 66, 66, 0.65);
+  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
 }
 
 .product-page-container img {
@@ -20,8 +20,8 @@
 }
 
 .product-page-container .product-page-details-container button {
-  -webkit-box-shadow: 0 0 10px 0 #444241;
-          box-shadow: 0 0 10px 0 #444241;
+  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
   text-transform: uppercase;
   font-weight: bold;
   margin: 1rem 0;

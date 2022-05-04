@@ -48,8 +48,8 @@
 .hero-container .CTA-container button {
   display: block;
   margin: 0 auto;
-  -webkit-box-shadow: 0 0 10px 1px rgba(66, 66, 66, 0.65);
-          box-shadow: 0 0 10px 1px rgba(66, 66, 66, 0.65);
+  -webkit-box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
+          box-shadow: 0 0 5px 2px rgba(129, 129, 129, 0.5);
   background: #e7d3c5;
   border: 2px solid #2d145c;
   border-radius: 5px;
