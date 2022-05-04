@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 1rem;
-    // flex: 1;
+    overflow: hidden;
     border-radius: 5px;
     border: 1px solid $main;
     .image-container {
@@ -26,6 +26,8 @@
       }
     }
     .product-details-container {
+      // transform: translateY(100%);
+      // transition: all 0.5s ease-in-out;
       background: $main;
       border-radius: 5px;
       padding: 1rem 2rem 2rem 2rem;
@@ -87,4 +89,9 @@
       }
     }
   }
+  // .prod:hover {
+  //   .product-details-container {
+  //     transform: translateY(0);
+  //   }
+  // }
 }
