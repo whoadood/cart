@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useCartContext } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 export default function CartItem({ prod }) {
   const selectQTY = [1, 2, 3, 4, 5];
+  const navigate = useNavigate();
   const [select, setSelect] = useState(prod.qty);
 
   const { dispatch } = useCartContext();
@@ -22,7 +24,7 @@ export default function CartItem({ prod }) {
   return (
     <li className="cartItem">
       <img src={prod.image} alt="product image" />
-      <h3>{prod.title}</h3>
+      <h3 onClick={() => navigate(`/product/${prod.id}`)}>{prod.title}</h3>
       <div className="price-total-container">
         <select type="input" name="qty" value={select} onChange={handleChange}>
           {selectQTY.map((q) => (

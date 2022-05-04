@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+}
 .header-container {
   position: fixed;
   background: $main;
@@ -92,12 +95,7 @@ body {
   font-weight: bold;
 }
 main {
-  background-image: url("/public/assets/pexels-min-an-1087727.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  background-color: hsla(0, 0%, 26%, 0.65);
+  background-color: $main-font;
   padding: 7rem 2rem 2rem 2rem;
   min-height: calc(100vh - 2rem);
   color: $main-font;
@@ -106,12 +104,6 @@ main {
   max-width: 1600px;
   margin: 0 auto;
   min-height: calc(100vh - 12rem);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 $accent;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1rem;
 }
 @media screen and (max-width: 1050px) {
