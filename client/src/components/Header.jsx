@@ -9,9 +9,12 @@ import { HiOutlineLogout, HiOutlineLogin } from "react-icons/hi";
 import "../styles/header.css";
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
+import { BsFillTabletLandscapeFill } from "react-icons/bs";
 
-export default function Header({ children, user = null }) {
+export default function Header({ children }) {
   const navigate = useNavigate();
+
+  const [user, setUser] = useState(false);
 
   const { cart } = useCartContext();
 
@@ -20,13 +23,9 @@ export default function Header({ children, user = null }) {
   const menuItems = [
     { name: "cart", icon: <FaShoppingCart />, route: "/cart" },
     { name: "products", icon: <RiShoppingBasket2Line />, route: "/products" },
-    {
-      name: "logout",
-      icon: user ? <HiOutlineLogout /> : <HiOutlineLogin />,
-      route: user ? "/logout" : "/login",
-    },
   ];
   const [active, setActive] = useState(false);
+
   return (
     <>
       <header className="header-container">
@@ -63,6 +62,15 @@ export default function Header({ children, user = null }) {
               )}
             </li>
           ))}
+          <li
+            onClick={() => {
+              if (!user) navigate("/login");
+
+              if (user) setUser(false);
+            }}
+          >
+            {user ? <HiOutlineLogout /> : <HiOutlineLogin />}
+          </li>
         </ul>
       </header>
       <main>

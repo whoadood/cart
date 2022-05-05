@@ -13,7 +13,7 @@
   .product-page-details-container {
     padding: 0 1rem;
     button {
-      box-shadow: 0 0 10px 0 hsl(20, 2%, 26%);
+      box-shadow: $shadow;
       text-transform: uppercase;
       font-weight: bold;
       margin: 1rem 0;
