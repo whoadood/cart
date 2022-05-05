@@ -65,7 +65,10 @@ export default function Header({ children }) {
           ))}
           <li
             onClick={() => {
-              if (!user.username) navigate("/login");
+              if (!user.username) {
+                setActive(false);
+                navigate("/login");
+              }
               return;
             }}
           >
@@ -73,6 +76,7 @@ export default function Header({ children }) {
               <HiOutlineLogout
                 onClick={() => {
                   dispatch({ type: "USER_LOGOUT" });
+                  setActive(false);
                   navigate("/");
                 }}
               />

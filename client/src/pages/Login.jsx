@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import "../styles/login.css";
 
@@ -26,10 +26,12 @@ export default function Login() {
     try {
       if (!username) {
         console.log("error");
+        return;
       }
 
       if (!password) {
         console.log("error password");
+        return;
       }
 
       if (username !== "" && password !== "") {
