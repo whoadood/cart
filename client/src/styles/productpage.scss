@@ -15,17 +15,23 @@
   .product-page-details-container {
     padding: 0 1rem;
     button {
-      box-shadow: $shadow;
       text-transform: uppercase;
       font-weight: bold;
-      margin: 1rem 0;
       cursor: pointer;
-      color: $main;
+      color: $main-font;
+      background: $main;
       border: 1px solid $accent;
+      box-shadow: $shadow;
       padding: 1rem;
+      margin: 1rem auto;
+      transition: background-color 0.25s ease-in-out;
     }
     button:hover {
-      background: hsla(24, 41%, 84%, 0.65);
+      background: $accent;
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: scale(1);
     }
     p {
       margin: 1rem 0;

@@ -4,9 +4,11 @@ import Product from "../components/Product";
 import "../styles/home.css";
 import { useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
+import { useUserContext } from "../context/UserContext";
 
 export default function Home() {
   const { data, isLoading, error } = useProductContext();
+  const { user } = useUserContext();
 
   const [bestSellers, setBestSellers] = useState([]);
   useEffect(() => {
@@ -22,6 +24,7 @@ export default function Home() {
   return (
     <>
       <h2>Garage Sale</h2>
+      {user.username && <h2>Welcome {user.username}</h2>}
       <div className="hero-container">
         <img src="/assets/pexels-kei-scampa-2964779.jpg" alt="storefront" />
         <div className="CTA-container">

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import "../styles/login.css";
 
 export default function Login() {
   const { user, dispatch } = useUserContext();
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     username: "",
@@ -30,16 +32,14 @@ export default function Login() {
         console.log("error password");
       }
 
-      await setTimeout(
-        () => dispatch({ type: "USER_LOGIN", user: form }),
-        3000
-      );
-
-      console.log("complete");
+      if (username !== "" && password !== "") {
+        localStorage.setItem("user", form.username);
+        dispatch({ type: "USER_LOGIN", user: form });
+      }
     } catch (err) {
       console.error(err);
     } finally {
-      if (user.username) console.log(user);
+      if (user.username) navigate("/");
     }
   };
 
