@@ -1,9 +1,11 @@
 .login-form {
   background: #2d145c;
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-radius: 5px;
-  max-width: 900px;
+  max-width: 500px;
   margin: 0 auto;
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,29 +16,68 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .login-form label {
-  color: #7732f5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  color: #e7d3c5;
   margin-bottom: 1rem;
 }
 
 .login-form label span {
+  display: block;
   margin-bottom: 1rem;
 }
 
 .login-form label input {
-  border: 1px solid #7732f5;
+  all: unset;
+  cursor: text;
+  border: 2px solid #7732f5;
+  color: #7732f5;
+  padding: 1rem;
+  min-width: 300px;
+  background-color: #e7d3c5;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.login-form label input:focus {
+  border-color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .login-form button {
-  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: #7732f5;
+  background: #e7d3c5;
+  border: 1px solid #2d145c;
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+  padding: 1rem;
+  margin: 1rem auto;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.login-form button:hover {
+  background: #7732f5;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #e7d3c5;
+}
+
+.login-form button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=login.css.map */

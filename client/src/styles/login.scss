@@ -2,26 +2,57 @@
 
 .login-form {
   background: $accent;
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-radius: 5px;
-  max-width: 900px;
+  max-width: 500px;
   margin: 0 auto;
+  box-shadow: $shadow;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   label {
-    color: $main;
-    display: flex;
-    flex-direction: column;
+    color: $main-font;
     margin-bottom: 1rem;
     span {
+      display: block;
       margin-bottom: 1rem;
     }
     input {
-      border: 1px solid $main;
+      all: unset;
+      cursor: text;
+      border: 2px solid $main;
+      color: $main;
+      padding: 1rem;
+      min-width: 300px;
+      background-color: $main-font;
+      border-radius: 5px;
+      box-shadow: $shadow;
+      transition: transform 0.5s ease-in-out;
+    }
+    input:focus {
+      border-color: hsl(0, 0%, 100%);
+      transform: scale(1.05);
     }
   }
   button {
-    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: $main;
+    background: $main-font;
+    border: 1px solid $accent;
+    box-shadow: $shadow;
+    padding: 1rem;
+    margin: 1rem auto;
+    transition: background-color 0.25s ease-in-out;
+  }
+  button:hover {
+    background: $main;
+    transform: scale(1.05);
+    color: $main-font;
+  }
+  button:active {
+    transform: scale(1);
   }
 }
