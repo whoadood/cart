@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useUserContext } from "../context/UserContext";
 import { HiMenu } from "react-icons/hi";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -14,7 +15,7 @@ import { BsFillTabletLandscapeFill } from "react-icons/bs";
 export default function Header({ children }) {
   const navigate = useNavigate();
 
-  const [user, setUser] = useState(false);
+  const { user, dispatch } = useUserContext();
 
   const { cart } = useCartContext();
 
@@ -64,12 +65,20 @@ export default function Header({ children }) {
           ))}
           <li
             onClick={() => {
-              if (!user) navigate("/login");
-
-              if (user) setUser(false);
+              if (!user.username) navigate("/login");
+              return;
             }}
           >
-            {user ? <HiOutlineLogout /> : <HiOutlineLogin />}
+            {user.username ? (
+              <HiOutlineLogout
+                onClick={() => {
+                  dispatch({ type: "USER_LOGOUT" });
+                  navigate("/");
+                }}
+              />
+            ) : (
+              <HiOutlineLogin />
+            )}
           </li>
         </ul>
       </header>

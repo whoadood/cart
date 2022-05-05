@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useUserContext } from "../context/UserContext";
 import "../styles/login.css";
 
 export default function Login() {
+  const { user, dispatch } = useUserContext();
+
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -19,9 +22,24 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(form);
+      if (!username) {
+        console.log("error");
+      }
+
+      if (!password) {
+        console.log("error password");
+      }
+
+      await setTimeout(
+        () => dispatch({ type: "USER_LOGIN", user: form }),
+        3000
+      );
+
+      console.log("complete");
     } catch (err) {
       console.error(err);
+    } finally {
+      if (user.username) console.log(user);
     }
   };
 
