@@ -8,8 +8,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
-          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+  -webkit-box-shadow: 0 0 5px 2px rgba(69, 69, 69, 0.55);
+          box-shadow: 0 0 5px 2px rgba(69, 69, 69, 0.55);
 }
 
 .hero-container img {
@@ -54,8 +54,8 @@
   color: #7732f5;
   background: #e7d3c5;
   border: 1px solid #2d145c;
-  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
-          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+  -webkit-box-shadow: 0 0 5px 2px rgba(69, 69, 69, 0.55);
+          box-shadow: 0 0 5px 2px rgba(69, 69, 69, 0.55);
   padding: 1rem;
   margin: 1rem auto;
   -webkit-transition: background-color 0.25s ease-in-out;

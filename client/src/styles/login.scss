@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .login-form {
-  background: $accent;
+  background: $main;
   padding: 2rem 1rem;
   border-radius: 5px;
   max-width: 500px;
@@ -21,7 +21,7 @@
     input {
       all: unset;
       cursor: text;
-      border: 2px solid $main;
+      border: 2px solid $accent;
       color: $main;
       padding: 1rem;
       min-width: 300px;
@@ -31,7 +31,6 @@
       transition: transform 0.5s ease-in-out;
     }
     input:focus {
-      border-color: hsl(0, 0%, 100%);
       transform: scale(1.05);
     }
   }
@@ -48,9 +47,9 @@
     transition: background-color 0.25s ease-in-out;
   }
   button:hover {
-    background: $main;
-    transform: scale(1.05);
     color: $main-font;
+    background: $accent;
+    transform: scale(1.05);
   }
   button:active {
     transform: scale(1);
