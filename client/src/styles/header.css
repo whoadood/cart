@@ -19,8 +19,8 @@ ul {
   padding: 0 1rem;
   color: #e7d3c5;
   z-index: 10;
-  -webkit-box-shadow: 0 0 5px 5px rgba(66, 66, 66, 0.65);
-          box-shadow: 0 0 5px 5px rgba(66, 66, 66, 0.65);
+  -webkit-box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
+          box-shadow: 0 0 5px 0 rgba(69, 69, 69, 0.671);
 }
 
 .header-container nav {

@@ -12,6 +12,7 @@
     justify-content: space-between;
     margin: 1rem;
     overflow: hidden;
+    box-shadow: $shadow;
     border-radius: 5px;
     border: 1px solid $main;
     .image-container {
@@ -30,7 +31,7 @@
       // transition: all 0.5s ease-in-out;
       background: $main;
       border-radius: 5px;
-      padding: 1rem 2rem 2rem 2rem;
+      padding: 0 2rem 2rem 2rem;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -39,12 +40,20 @@
         font-weight: bold;
         cursor: pointer;
         color: $main;
+        background: $main-font;
         border: 1px solid $accent;
+        box-shadow: $shadow;
         padding: 1rem;
         margin: 1rem auto;
+        transition: background-color 0.25s ease-in-out;
       }
       button:hover {
-        background: hsla(24, 41%, 84%, 0.65);
+        background: $accent;
+        transform: scale(1.05);
+        color: $main-font;
+      }
+      button:active {
+        transform: scale(1);
       }
       .link-to-product {
         cursor: pointer;
