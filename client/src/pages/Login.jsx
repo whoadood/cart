@@ -23,6 +23,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       if (!username) {
         console.log("error");
@@ -38,10 +39,9 @@ export default function Login() {
         localStorage.setItem("user", form.username);
         dispatch({ type: "USER_LOGIN", user: form });
       }
+      navigate("/");
     } catch (err) {
       console.error(err);
-    } finally {
-      if (user.username) navigate("/");
     }
   };
 

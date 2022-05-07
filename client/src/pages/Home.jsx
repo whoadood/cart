@@ -43,9 +43,7 @@ export default function Home() {
       ) : (
         <ul className="product-container">
           {bestSellers?.map((prod) => (
-            <li key={prod.id}>
-              <Product prod={prod} />
-            </li>
+            <Product key={prod.id} prod={prod} />
           ))}
         </ul>
       )}
