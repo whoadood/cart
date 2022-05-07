@@ -4,7 +4,7 @@ import { useUserContext } from "../context/UserContext";
 import "../styles/login.css";
 
 export default function Login() {
-  const { user, dispatch } = useUserContext();
+  const { login } = useUserContext();
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -36,12 +36,12 @@ export default function Login() {
       }
 
       if (username !== "" && password !== "") {
-        localStorage.setItem("user", form.username);
-        dispatch({ type: "USER_LOGIN", user: form });
+        login(username, password);
       }
-      navigate("/");
     } catch (err) {
       console.error(err);
+    } finally {
+      navigate("/");
     }
   };
 

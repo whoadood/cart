@@ -10,12 +10,11 @@ import { HiOutlineLogout, HiOutlineLogin } from "react-icons/hi";
 import "../styles/header.css";
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
-import { BsFillTabletLandscapeFill } from "react-icons/bs";
 
 export default function Header({ children }) {
   const navigate = useNavigate();
 
-  const { user, dispatch } = useUserContext();
+  const { user, logout } = useUserContext();
 
   const { cart } = useCartContext();
 
@@ -65,24 +64,15 @@ export default function Header({ children }) {
           ))}
           <li
             onClick={() => {
+              setActive(false);
               if (!user.username) {
-                setActive(false);
                 navigate("/login");
+              } else {
+                logout();
               }
-              return;
             }}
           >
-            {user.username ? (
-              <HiOutlineLogout
-                onClick={() => {
-                  dispatch({ type: "USER_LOGOUT" });
-                  setActive(false);
-                  navigate("/");
-                }}
-              />
-            ) : (
-              <HiOutlineLogin />
-            )}
+            {user.username ? <HiOutlineLogout /> : <HiOutlineLogin />}
           </li>
         </ul>
       </header>

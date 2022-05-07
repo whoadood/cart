@@ -5,20 +5,23 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import ProductPage from "./pages/ProductPage";
 import Login from "./pages/Login";
+import UserProvider from "./context/UserContext";
 
 function App() {
   return (
     <>
       <Router>
-        <Header>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/product/:id" element={<ProductPage />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-        </Header>
+        <UserProvider>
+          <Header>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </Header>
+        </UserProvider>
       </Router>
     </>
   );
