@@ -24,22 +24,19 @@ export default function Header({ children }) {
     { name: "cart", icon: <FaShoppingCart />, route: "/cart" },
     { name: "products", icon: <RiShoppingBasket2Line />, route: "/products" },
   ];
-  const [active, setActive] = useState(false);
 
   return (
     <>
       <header className="header-container">
         <nav>
-          <h1 onClick={() => navigate("/")}>Garage Sale</h1>
-          <div
-            className="header-menu-container"
-            onClick={() => setActive(!active)}
-          >
+          <h1 onClick={() => navigate("/")}>
+            Garage Sale<span className="nav-tooltip">Home</span>
+          </h1>
+          <div className="header-menu-container">
             <ul className="header-menu-active-container">
               {menuItems.map((item) => (
                 <li
                   onClick={() => {
-                    setActive(false);
                     navigate(item.route);
                   }}
                   key={item.name}
@@ -48,11 +45,11 @@ export default function Header({ children }) {
                   {item.name === "cart" && cartQTY > 0 && (
                     <div className="cart-qty">{cartQTY}</div>
                   )}
+                  <span className="nav-tooltip">{item.name}</span>
                 </li>
               ))}
               <li
                 onClick={() => {
-                  setActive(false);
                   if (!user.username) {
                     navigate("/login");
                   } else {
@@ -61,6 +58,9 @@ export default function Header({ children }) {
                 }}
               >
                 {user.username ? <HiOutlineLogout /> : <HiOutlineLogin />}
+                <span className="nav-tooltip">
+                  {user.username ? "Logout" : "Login"}
+                </span>
               </li>
             </ul>
           </div>

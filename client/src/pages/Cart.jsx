@@ -2,9 +2,11 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 import CartItem from "../components/CartItem";
 import "../styles/cart.css";
+import { useUserContext } from "../context/UserContext";
 
 export default function Cart() {
   const { cart } = useCartContext();
+  const { user } = useUserContext();
 
   return (
     <>
@@ -24,7 +26,7 @@ export default function Cart() {
             <button className="checkout">Checkout</button>
           </li>
         ) : (
-          <h3>cart is empty...</h3>
+          <h3>{user.username && `${user.username}'s`} cart is empty...</h3>
         )}
       </ul>
     </>

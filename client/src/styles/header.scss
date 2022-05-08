@@ -30,9 +30,25 @@ ul {
       cursor: pointer;
       padding: 0.5rem;
       border-radius: 5px;
+      position: relative;
+      .nav-tooltip {
+        transition: transform 0.35s ease-in-out;
+        position: absolute;
+        bottom: -75%;
+        left: 25%;
+        transform: scale(0) translateX(-50%);
+        font-size: 1rem;
+        background: $accent;
+        padding: 0.25rem 0.5rem;
+        border-radius: 5px;
+      }
     }
     h1:hover {
       background: $hover;
+      .nav-tooltip {
+        transform: scale(1);
+        position: absolute;
+      }
     }
     h1:active {
       transform: scale(0.95);
@@ -51,7 +67,6 @@ ul {
 }
 .header-menu-active-container {
   display: flex;
-  overflow: hidden;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -74,9 +89,24 @@ ul {
       bottom: 0;
       right: -5px;
     }
+    .nav-tooltip {
+      transition: transform 0.35s ease-in-out;
+      position: absolute;
+      bottom: -75%;
+      right: 0%;
+      font-size: 1rem;
+      background: $accent;
+      padding: 0.25rem 0.5rem;
+      border-radius: 5px;
+      transform: scale(0) translateX(-50%);
+    }
   }
   li:hover {
     background: $hover;
+    .nav-tooltip {
+      transform: scale(1);
+      position: absolute;
+    }
   }
   li:active {
     transform: scale(0.95);

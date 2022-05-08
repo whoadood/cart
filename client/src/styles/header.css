@@ -42,10 +42,33 @@ ul {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 5px;
+  position: relative;
+}
+
+.header-container nav h1 .nav-tooltip {
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+  position: absolute;
+  bottom: -75%;
+  left: 25%;
+  -webkit-transform: scale(0) translateX(-50%);
+          transform: scale(0) translateX(-50%);
+  font-size: 1rem;
+  background: #2d145c;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
 }
 
 .header-container nav h1:hover {
   background: rgba(66, 66, 66, 0.5);
+}
+
+.header-container nav h1:hover .nav-tooltip {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  position: absolute;
 }
 
 .header-container nav h1:active {
@@ -74,7 +97,6 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -110,8 +132,30 @@ ul {
   right: -5px;
 }
 
+.header-menu-active-container li .nav-tooltip {
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+  position: absolute;
+  bottom: -75%;
+  right: 0%;
+  font-size: 1rem;
+  background: #2d145c;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  -webkit-transform: scale(0) translateX(-50%);
+          transform: scale(0) translateX(-50%);
+}
+
 .header-menu-active-container li:hover {
   background: rgba(66, 66, 66, 0.5);
+}
+
+.header-menu-active-container li:hover .nav-tooltip {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  position: absolute;
 }
 
 .header-menu-active-container li:active {
