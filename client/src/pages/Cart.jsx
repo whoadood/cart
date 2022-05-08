@@ -10,7 +10,7 @@ export default function Cart() {
 
   return (
     <>
-      <h2>Cart</h2>
+      <h2>{user.username && `${user.username}'s `}Cart</h2>
       <ul className="cart-list-container">
         {cart?.map((item) => (
           <CartItem key={item.id} prod={item} />
