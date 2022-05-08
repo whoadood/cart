@@ -35,46 +35,36 @@ export default function Header({ children }) {
             className="header-menu-container"
             onClick={() => setActive(!active)}
           >
-            {active ? <IoIosCloseCircle /> : <HiMenu />}
+            <ul className="header-menu-active-container">
+              {menuItems.map((item) => (
+                <li
+                  onClick={() => {
+                    setActive(false);
+                    navigate(item.route);
+                  }}
+                  key={item.name}
+                >
+                  {item.icon ? item.icon : item.name}
+                  {item.name === "cart" && cartQTY > 0 && (
+                    <div className="cart-qty">{cartQTY}</div>
+                  )}
+                </li>
+              ))}
+              <li
+                onClick={() => {
+                  setActive(false);
+                  if (!user.username) {
+                    navigate("/login");
+                  } else {
+                    logout();
+                  }
+                }}
+              >
+                {user.username ? <HiOutlineLogout /> : <HiOutlineLogin />}
+              </li>
+            </ul>
           </div>
         </nav>
-        <ul
-          style={{
-            transform: `${active ? "translateX(0)" : "translateX(0)"}`,
-            opacity: `${active ? "1" : "0"}`,
-            zIndex: `${active ? 3 : 0}`,
-            maxHeight: `${active ? "500px" : 0}`,
-            transition: "all 1s ease-in-out",
-          }}
-          className="header-menu-active-container"
-        >
-          {menuItems.map((item) => (
-            <li
-              onClick={() => {
-                setActive(false);
-                navigate(item.route);
-              }}
-              key={item.name}
-            >
-              {item.icon ? item.icon : item.name}
-              {item.name === "cart" && cartQTY > 0 && (
-                <div className="cart-qty">{cartQTY}</div>
-              )}
-            </li>
-          ))}
-          <li
-            onClick={() => {
-              setActive(false);
-              if (!user.username) {
-                navigate("/login");
-              } else {
-                logout();
-              }
-            }}
-          >
-            {user.username ? <HiOutlineLogout /> : <HiOutlineLogin />}
-          </li>
-        </ul>
       </header>
       <main>
         <div className="page-container">{children}</div>

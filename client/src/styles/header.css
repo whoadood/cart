@@ -70,15 +70,6 @@ ul {
   z-index: 2;
 }
 
-.header-menu-container:hover {
-  background: rgba(66, 66, 66, 0.5);
-}
-
-.header-menu-container:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
 .header-menu-active-container {
   display: -webkit-box;
   display: -ms-flexbox;

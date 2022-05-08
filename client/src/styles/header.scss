@@ -49,12 +49,6 @@ ul {
   align-items: center;
   z-index: 2;
 }
-.header-menu-container:hover {
-  background: $hover;
-}
-.header-menu-container:active {
-  transform: scale(0.95);
-}
 .header-menu-active-container {
   display: flex;
   overflow: hidden;
