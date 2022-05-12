@@ -4,7 +4,6 @@ export const userReducer = (user, action) => {
       return { ...action.user };
     }
     case "USER_LOGOUT": {
-      localStorage.removeItem("user");
       return {};
     }
     default: {
