@@ -3,4 +3,4 @@
 - remove from cart
 - preview cart
 
-simple
+testing lighthouse
