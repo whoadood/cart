@@ -1,4 +1,4 @@
-name: Vercel Preview URL Lighthouse Audit
+name: Netlify Preview URL Lighthouse Audit
 
 on:
   issue_comment:
@@ -27,7 +27,7 @@ jobs:
             core.setOutput('netlify_preview_url', previewUrl);
             
       - name: Add comment to PR
-        if: ${{ steps.get_preview_url.outputs.vercel_preview_url != '' }}
+        if: ${{ steps.get_preview_url.outputs.netlify_preview_url != '' }}
         id: loading_comment_to_pr
         uses: marocchino/sticky-pull-request-comment@v1
         with:
@@ -37,11 +37,11 @@ jobs:
           message: |
             Running Lighthouse audit...
       - name: Checkout repository
-        if: ${{ steps.get_preview_url.outputs.vercel_preview_url != '' }}
+        if: ${{ steps.get_preview_url.outputs.netlify_preview_url != '' }}
         uses: actions/checkout@v3
 
       - name: Audit preview URL with Lighthouse
-        if: ${{ steps.get_preview_url.outputs.vercel_preview_url != '' }}
+        if: ${{ steps.get_preview_url.outputs.netlify_preview_url != '' }}
         id: lighthouse_audit
         uses: treosh/lighthouse-ci-action@v3
         with:
