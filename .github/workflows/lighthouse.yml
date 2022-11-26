@@ -20,7 +20,7 @@ jobs:
             const matches = comment.body.match(regex);
             let previewUrl = "https://whoadoodcart.netlify.app";
 
-            console.log(`${previewURL ? 'Preview url found: ${previewUrl}' : 'No preview url found.'}`);
+            console.log(`${previewUrl ? 'Preview url found: ${previewUrl}' : 'No preview url found.'}`);
             core.setOutput('netlify_preview_url', previewUrl);
             
       - name: Add comment to PR
