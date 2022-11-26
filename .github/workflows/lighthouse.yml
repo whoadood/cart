@@ -20,7 +20,7 @@ jobs:
             const matches = comment.body.match(regex);
             let previewUrl = "https://whoadoodcart.netlify.app";
 
-            console.log(`${previewUrl ? 'Preview url found: ${previewUrl}' : 'No preview url found.'}`);
+            console.log(`${previewUrl ? 'Preview url found: ' + previewUrl : 'No preview url found.'}`);
             core.setOutput('netlify_preview_url', previewUrl);
             
       - name: Add comment to PR
@@ -32,7 +32,7 @@ jobs:
           number: ${{ github.event.issue.number }}
           header: lighthouse
           message: |
-            Running Lighthouse audit...
+            Running Lighthouse audit on ${{ steps.get_preview_url.outputs.netlify_preview_url }}...
       - name: Checkout repository
         if: ${{ steps.get_preview_url.outputs.netlify_preview_url != '' }}
         uses: actions/checkout@v3
